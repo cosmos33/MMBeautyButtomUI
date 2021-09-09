@@ -1,1 +1,0 @@
-../../../../MMBeautyUI/MMBeautyTabCollectionViewCell.h
