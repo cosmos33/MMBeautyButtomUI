@@ -31,6 +31,17 @@ static NSArray * kMMBeautyAutoModelArray(){
     return array;
 }
 
+static NSArray * kMMBeautyKitOnceBeuatyArray(){
+    static dispatch_once_t onceToken;
+    static NSArray * array = nil;
+    dispatch_once(&onceToken, ^{
+        NSURL *path = [[NSBundle bundleForClass:MMBeautyBottomRecordView.class] URLForResource:@"MMBeautyKit" withExtension:@"bundle"];
+        NSURL *jsonPath = [[NSBundle bundleWithURL:path] URLForResource:@"MMBeautyAutoModel" withExtension:@"geojson"];
+        array = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:jsonPath] options:0 error:nil];
+    });
+    return array;
+}
+
 @implementation MMBeautyBottomRecordView
 
 - (instancetype)initWithOptions:(MMBeautyUIItemKeyOptions)options andFrame:(CGRect)frame{
@@ -61,6 +72,10 @@ static NSArray * kMMBeautyAutoModelArray(){
         
         beautyView.selectedModel = ^(MMBottomViewModelItem * _Nonnull item) {
             __strong typeof(self) sself = wself;
+            if ([item.type isEqualToString:@"OneClickbeauty"]) {
+                // 更新一键美颜对应的美颜参数值
+                [sself updateModelValueWithOnceBeautyModel:item];
+            }
             sself.selectedModel ? sself.selectedModel(item) : nil;
         };
         beautyView.clickSliderView = ^{
@@ -78,6 +93,46 @@ static NSArray * kMMBeautyAutoModelArray(){
     return self;
 }
 
+- (void)updateModelValueWithOnceBeautyModel:(MMBottomViewModelItem *)model{
+    NSArray *itemArr = [kMMBeautyKitOnceBeuatyArray() objectAtIndex:model.identifier.intValue];
+    MMBottomViewModel *micSurModel = nil;
+    MMBottomViewModel *beautyModel = nil;
+    if (self.itemOptions & MMBeautyUIItemKeyMicroSurgery) {
+        for (MMBottomViewModel *itemModel in self.models) {
+            if ([itemModel.name isEqualToString:@"微整形"]) {
+                micSurModel = itemModel;
+                break;
+            }
+        }
+    }
+    if (self.itemOptions & MMBeautyUIItemKeyBeauty) {
+        for (MMBottomViewModel *itemModel in self.models) {
+            if ([itemModel.name isEqualToString:@"美颜"]) {
+                beautyModel = itemModel;
+                break;
+            }
+        }
+    }
+    [itemArr enumerateObjectsUsingBlock:^(NSDictionary * obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSLog(@"%@",obj);
+        for (MMBottomViewModelItem *beauty in beautyModel.contents) {
+            if ([beauty.title isEqualToString:obj[@"title"]]) {
+                NSNumber *number = [obj objectForKey:@"value"];
+                beauty.curPos = number.floatValue;
+                break;
+            }
+        }
+        for (MMBottomViewModelItem *model in micSurModel.contents) {
+            if ([model.title isEqualToString:obj[@"title"]]) {
+                NSNumber *number = [obj objectForKey:@"value"];
+                model.curPos = number.floatValue;
+                break;
+            }
+        }
+    }];
+    
+    [self.beautyView reloadData];
+}
 
 - (NSArray<MMBottomViewModel *> *)getModelWithOptions:(MMBeautyUIItemKeyOptions)options{
     NSMutableArray<MMBottomViewModel *> *models = [NSMutableArray array];

@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSArray *)getAllselectedMakeUpItems;
 
+- (void)reloadData;
+
 @end
 
 NS_ASSUME_NONNULL_END

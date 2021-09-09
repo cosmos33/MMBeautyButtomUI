@@ -28,13 +28,13 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/sunfei_fish@sina.cn/MMBeautyKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '11.0'
   
   s.source_files  = "MMBeautyUI/**/*.{h,m}"
   s.public_header_files = "MMBeautyUI/**/*.h"
   s.resource = ["MMBeautyUI/*.bundle","MMBeautyUI/*.geojson"]
  
-   
+  s.dependency 'MMBeautyKit'
   s.frameworks = 'UIKit'
   s.static_framework = true
 end

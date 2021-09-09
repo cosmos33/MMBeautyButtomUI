@@ -1,16 +1,103 @@
 PODS:
-  - MMBeautyUI (0.1.0)
+  - CosmosEncrypt (1.0.0):
+    - openssl-lib
+    - protobuf-lib
+  - Mantle (2.1.6):
+    - Mantle/extobjc (= 2.1.6)
+  - Mantle/extobjc (2.1.6)
+  - MCCSecret (1.0.0)
+  - MetalPetal/Static (1.13.0)
+  - MMBeautyKit (2.8.2-interact):
+    - CosmosEncrypt
+    - MCCSecret
+    - MMBeautyMedia
+    - MMCV
+    - MMDevice
+    - MMFileService
+    - MMXEngine
+  - MMBeautyMedia (2.8.1):
+    - Mantle
+    - MetalPetal/Static
+    - MMBeautyMedia/Beauty (= 2.8.1)
+    - MMBeautyMedia/Filter (= 2.8.1)
+    - MMBeautyMedia/Sticker (= 2.8.1)
+  - MMBeautyMedia/Beauty (2.8.1):
+    - Mantle
+    - MetalPetal/Static
+    - MMCV
+  - MMBeautyMedia/Filter (2.8.1):
+    - Mantle
+    - MetalPetal/Static
+  - MMBeautyMedia/Sticker (2.8.1):
+    - Mantle
+    - MetalPetal/Static
+    - MMCV
+    - MMXEngine
+  - MMBeautyUI (0.1.0):
+    - MMBeautyKit
+  - MMCV (2.8.1):
+    - MCCSecret
+    - MMFileService
+    - PhotonHTTPDNS
+    - ZipArchive
+  - MMDevice (1.0.1)
+  - MMFileService (1.3.6)
+  - MMXEngine (4.5.1.20210826.1833):
+    - MMXEngineBase (= 4.5.0)
+  - MMXEngineBase (4.5.0)
+  - openssl-lib (1.0.1)
+  - PhotonHTTPDNS (1.0.5)
+  - protobuf-lib (3.6.1.2)
+  - ZipArchive (1.4.0)
 
 DEPENDENCIES:
+  - MetalPetal/Static (= 1.13.0)
+  - MMBeautyKit (= 2.8.2-interact)
+  - MMBeautyMedia (= 2.8.1)
   - MMBeautyUI (from `./`)
+  - MMCV (= 2.8.1)
+
+SPEC REPOS:
+  https://github.com/cosmos33/MMSpecs.git:
+    - CosmosEncrypt
+    - MCCSecret
+    - MetalPetal
+    - MMBeautyKit
+    - MMBeautyMedia
+    - MMCV
+    - MMDevice
+    - MMFileService
+    - MMXEngine
+    - MMXEngineBase
+    - openssl-lib
+    - PhotonHTTPDNS
+    - protobuf-lib
+  trunk:
+    - Mantle
+    - ZipArchive
 
 EXTERNAL SOURCES:
   MMBeautyUI:
     :path: "./"
 
 SPEC CHECKSUMS:
-  MMBeautyUI: ff794649adcd4ea6844ab7cfb45f3505cbb212e1
+  CosmosEncrypt: cf630ded96fc16c4968296dc438644e9173a248b
+  Mantle: 4c0ed6ce47c96eccc4dc3bb071deb3def0e2c3be
+  MCCSecret: 5658f66290969726586eddbdfe45e27731dbfa17
+  MetalPetal: 3f0fb530b09db6896bcf1fa05739fdb2f489515c
+  MMBeautyKit: d79d13b3aa5b555f1476eebdf5a7aa0c87106cd9
+  MMBeautyMedia: 714e0cc4c9383bf4c2face15bbaf9622f518562c
+  MMBeautyUI: 6a5f5f94ec883c90b6052354c80d7b189c463daa
+  MMCV: ba263b70526fa45fdca4a481a40a358be5f58d77
+  MMDevice: ea2f783f769331e40c558ef894541e31ced9aa13
+  MMFileService: 780cd7e63331b6cb66a78e2aa5adb682dd3ab78c
+  MMXEngine: ec42c6429c58f6f42688aba3a22b2ca4023a0160
+  MMXEngineBase: 329b6d8f3397f9c0cd19ae12481e72f658c828a4
+  openssl-lib: e3f61a10280caf261c0e4c6b3e720aa94825f07a
+  PhotonHTTPDNS: 43a68f55a25c92c70efbe6e12fe4b75cdbfef64f
+  protobuf-lib: 8c7e69bfb33e9d7f3c5f7724f6cb82aa734699d2
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-PODFILE CHECKSUM: 5426461c2fc4272e91aa4cd70ccefd3377f043fd
+PODFILE CHECKSUM: b8b802fae1c2d9cd7a8bc4209693537d9b3d5b26
 
 COCOAPODS: 1.10.1

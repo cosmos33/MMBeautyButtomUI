@@ -633,4 +633,10 @@
     return  array;
 }
 
+- (void)reloadData{
+    if (self.models) {
+        [self.collectionView reloadData];
+    }
+}
+
 @end

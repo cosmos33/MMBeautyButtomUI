@@ -179,4 +179,8 @@
     return [self.tabView getAllselectedMakeUpItems];
 }
 
+- (void)reloadData{
+    [self.tabView reloadData];
+}
+
 @end

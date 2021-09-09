@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ADCBA3AF23616AA97D0B63E /* Pods_MMBeautyBottomUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53F359902D51D73BCFB0526 /* Pods_MMBeautyBottomUI.framework */; };
 		5E947DB426E767CB002FEBC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E947DB326E767CB002FEBC5 /* AppDelegate.m */; };
 		5E947DB726E767CB002FEBC5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E947DB626E767CB002FEBC5 /* SceneDelegate.m */; };
 		5E947DBA26E767CB002FEBC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E947DB926E767CB002FEBC5 /* ViewController.m */; };
@@ -14,12 +15,10 @@
 		5E947DBF26E767CB002FEBC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E947DBE26E767CB002FEBC5 /* Assets.xcassets */; };
 		5E947DC226E767CB002FEBC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E947DC026E767CB002FEBC5 /* LaunchScreen.storyboard */; };
 		5E947DC526E767CB002FEBC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E947DC426E767CB002FEBC5 /* main.m */; };
-		CB237D6C78A2436D382E51A8 /* libPods-MMBeautyBottomUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBAB728F714D6FB6C19B1AF /* libPods-MMBeautyBottomUI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		26307523BFF7349F8CF29770 /* Pods-MMBeautyBottomUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMBeautyBottomUI.release.xcconfig"; path = "Target Support Files/Pods-MMBeautyBottomUI/Pods-MMBeautyBottomUI.release.xcconfig"; sourceTree = "<group>"; };
-		4FBAB728F714D6FB6C19B1AF /* libPods-MMBeautyBottomUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MMBeautyBottomUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E947DAF26E767CB002FEBC5 /* MMBeautyBottomUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMBeautyBottomUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E947DB226E767CB002FEBC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E947DB326E767CB002FEBC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -37,6 +36,7 @@
 		5E947DD926E767CC002FEBC5 /* MMBeautyBottomUIUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMBeautyBottomUIUITests.m; sourceTree = "<group>"; };
 		5E947DDB26E767CC002FEBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E00430F3415FF5C53A80ED7 /* Pods-MMBeautyBottomUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MMBeautyBottomUI.debug.xcconfig"; path = "Target Support Files/Pods-MMBeautyBottomUI/Pods-MMBeautyBottomUI.debug.xcconfig"; sourceTree = "<group>"; };
+		A53F359902D51D73BCFB0526 /* Pods_MMBeautyBottomUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MMBeautyBottomUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB237D6C78A2436D382E51A8 /* libPods-MMBeautyBottomUI.a in Frameworks */,
+				0ADCBA3AF23616AA97D0B63E /* Pods_MMBeautyBottomUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +54,7 @@
 		3C78F2E2C3DE618657809C80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4FBAB728F714D6FB6C19B1AF /* libPods-MMBeautyBottomUI.a */,
+				A53F359902D51D73BCFB0526 /* Pods_MMBeautyBottomUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -388,7 +388,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F52PY255FC;
 				INFOPLIST_FILE = MMBeautyBottomUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -409,7 +409,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F52PY255FC;
 				INFOPLIST_FILE = MMBeautyBottomUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

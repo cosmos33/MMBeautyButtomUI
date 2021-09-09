@@ -23,16 +23,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "12FECE88-E3FE-4230-9B72-29DD1E2AA791"
+            uuid = "591125BD-BA94-478C-9BDF-711BB4500362"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MMBeautyUI/MMBeautyBottomRecordView.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "-getModelWithOptions:"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "-updateModelValueWithOnceBeautyModel:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D151575C-8A4F-4213-8EAA-4EC5C04A4665"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MMBeautyUI/MMBeautyBottomRecordView.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "-updateModelValueWithOnceBeautyModel:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
