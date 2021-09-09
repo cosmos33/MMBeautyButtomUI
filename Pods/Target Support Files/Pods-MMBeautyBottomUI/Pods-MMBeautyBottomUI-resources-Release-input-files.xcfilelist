@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-MMBeautyBottomUI/Pods-MMBeautyBottomUI-resources.sh
+${PODS_ROOT}/../MMBeautyUI/Lookup.bundle
+${PODS_ROOT}/../MMBeautyUI/makeup.bundle
+${PODS_ROOT}/../MMBeautyUI/UI.bundle
+${PODS_ROOT}/../MMBeautyUI/BeautyConfig.geojson
+${PODS_ROOT}/../MMBeautyUI/makeupConfig.geojson

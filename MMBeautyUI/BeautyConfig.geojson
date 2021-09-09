@@ -1,0 +1,997 @@
+[
+    {
+        "name":"一键美颜",
+        "type":"OneClickbeauty",
+        "contents": [
+        {
+            "title":"无",
+            "type":"OneClickbeauty",
+            "icon":"MMBeautyUI.bundle/none@2x.png",
+            "highlight":"none",
+            "identifier": 0,
+            "contents":[]
+        },
+        {
+            "title":"自然",
+            "type":"OneClickbeauty",
+            "icon":"MMBeautyUI.bundle/oncebeauty/oncebeauty_04@2x.png",
+            "highlight":"oncebeauty_04",
+            "identifier": 1,
+            "contents":[]
+        },
+        {
+            "title":"可爱",
+            "icon":"MMBeautyUI.bundle/oncebeauty/oncebeauty_02@2x.png",
+            "type":"OneClickbeauty",
+            "highlight":"oncebeauty_02",
+            "identifier": 2,
+            "contents":[]
+        },
+        {
+            "title":"女神",
+            "icon":"MMBeautyUI.bundle/oncebeauty/oncebeauty_03@2x.png",
+            "type":"OneClickbeauty",
+            "highlight":"oncebeauty_03",
+            "identifier": 3,
+            "contents":[]
+        },
+        {
+            "title":"净白",
+            "icon":"MMBeautyUI.bundle/oncebeauty/oncebeauty_01@2x.png",
+            "type":"OneClickbeauty",
+            "highlight":"oncebeauty_01",
+            "identifier": 4,
+            "contents":[]
+        },
+        ]
+    },
+    {
+        "name":"美颜",
+        "type":"beauty",
+        "contents": [
+            {
+                "title":"磨皮",
+                "icon":"MMBeautyUI.bundle/beauty/smooth@2x.png",
+                "highlight":"MMBeautyUI.bundle/beauty/smooth-selected@2x.png",
+                "value":0.7,
+                "sliderType":0,
+                "type":"kBeautyFilterKeySmooth"
+            }, {
+                "title":"美白",
+                "icon":"MMBeautyUI.bundle/beauty/skinWhiten@2x.png",
+                "highlight":"MMBeautyUI.bundle/beauty/skinWhiten-selected@2x.png",
+                "value":0.4,
+                "sliderType":0,
+                "type":"kBeautyFilterKeyWhitening"
+
+            }, {
+                "title":"红润",
+                "icon":"MMBeautyUI.bundle/beauty/ruddy@2x.png",
+                "highlight":"MMBeautyUI.bundle/beauty/ruddy-selected@2x.png",
+                "value":0.5,
+                "sliderType":0,
+                "type":"kBeautyFilterKeyRubby"
+
+            }, {
+                "title":"大眼",
+                "icon":"MMBeautyUI.bundle/beauty/bigEye@2x.png",
+                "highlight":"MMBeautyUI.bundle/beauty/bigEye-selected@2x.png",
+                "value":0.4,
+                "sliderType":0,
+                "type":"eyeSize"
+
+            }, {
+                "title":"瘦脸",
+                "icon":"MMBeautyUI.bundle/beauty/thinface@2x.png",
+                "highlight":"MMBeautyUI.bundle/beauty/thinface-selected@2x.png",
+                "value":0.5,
+                "sliderType":0,
+                "type":"thinFace"
+
+            }
+        ]
+    },
+    {
+        "name":"微整形",
+        "type":"beauty",
+        "contents": [
+            {
+                "title":"脸宽",
+                "icon":"MMBeautyUI.bundle/microSurgery/thinW@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/thinW-selected@2x.png",
+                "value":0,
+                "sliderType":0,
+                "type":"faceWidth"
+
+            }, {
+                "title":"削脸",
+                "icon":"MMBeautyUI.bundle/microSurgery/shape@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/shape-selected@2x.png",
+                "value":0,
+                "sliderType":1,
+                "type":"jawShape"
+
+            }, {
+                "title":"短脸",
+                "icon":"MMBeautyUI.bundle/microSurgery/face@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/face-selected@2x.png",
+                "value":0,
+                "sliderType":0,
+                "type":"shortenFace"
+
+            }, {
+                "title":"额头",
+                "icon":"MMBeautyUI.bundle/microSurgery/forehead@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/forehead-selected@2x.png",
+                "value":0,
+                "sliderType":1,
+                "type":"forehead"
+
+            }, {
+                "title":"下巴",
+                "icon":"MMBeautyUI.bundle/microSurgery/chin@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/chin-selected@2x.png",
+                "value":0,
+                "sliderType":1,
+                "type":"chinLength"
+
+            },
+            {
+                "title":"颧骨",
+                "icon":"MMBeautyUI.bundle/microSurgery/thincheekbone@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/thincheekbone-selected@2x.png",
+                "value":0,
+                "sliderType":0,
+                "type":"cheekboneWidth"
+
+            }, {
+                "title":"下颌骨",
+                "icon":"MMBeautyUI.bundle/microSurgery/thinjaw@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/thinjaw-selected@2x.png",
+                "value":0,
+                "sliderType":0,
+                "type":"jaw2Width"
+
+            }, {
+                "title":"鼻子宽度",
+                "icon":"MMBeautyUI.bundle/microSurgery/nosewidth@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/nosewidth-selected@2x.png",
+                "value":0,
+                "sliderType":1,
+                "type":"noseWidth"
+
+            }, {
+                "title":"鼻子大小",
+                "icon":"MMBeautyUI.bundle/microSurgery/noseShape@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/noseShape-selected@2x.png",
+                "value":0,
+                "sliderType":1,
+                "type":"noseSize"
+
+            }, {
+                "title":"鼻高",
+                "icon":"MMBeautyUI.bundle/microSurgery/noseH@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/nose-selected@2x.png",
+                "value":0,
+                "sliderType":1,
+                "type":"noseLift"
+
+            }, {
+                "title":"鼻梁",
+                "icon":"MMBeautyUI.bundle/microSurgery/noseBridge@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/noseBridge-selected@2x.png",
+                "value":0,
+                "sliderType":1,
+                "type":"noseRidgeWidth"
+
+            }, {
+                "title":"鼻尖",
+                "icon":"MMBeautyUI.bundle/microSurgery/nosetip@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/nosetip-selected@2x.png",
+                "value":0,
+                "sliderType":1,
+                "type":"noseTipSize"
+
+            }, {
+                "title":"眼睛角度",
+                "icon":"MMBeautyUI.bundle/microSurgery/eyetint@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/eyetint-selected@2x.png",
+                "value":0,
+                "sliderType":1,
+                "type":"eyeTilt"
+
+            }, {
+                "title":"眼距",
+                "icon":"MMBeautyUI.bundle/microSurgery/eyedif@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/eyedif-selected@2x.png",
+                "value":0,
+                "sliderType":-1,
+                "type":"eyeDistance"
+
+            }, {
+                "title":"眼高",
+                "icon":"MMBeautyUI.bundle/microSurgery/eyeH@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/eyeH-selected@2x.png",
+                "value":0,
+                "sliderType":0,
+                "type":"eyeHeight"
+
+            }, {
+                "title":"嘴唇厚度",
+                "icon":"MMBeautyUI.bundle/microSurgery/mouth@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/mouth-selected@2x.png",
+                "value":0,
+                "sliderType":1,
+                "type":"lipThickness"
+
+            }, {
+                "title":"嘴唇大小",
+                "icon":"MMBeautyUI.bundle/microSurgery/mouth2@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/mouth2-selected@2x.png",
+                "value":0,
+                "sliderType":1,
+                "type":"mouthSize"
+
+            }, {
+                "title":"眼袋",
+                "icon":"MMBeautyUI.bundle/microSurgery/eyebag@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/eyebag_selected@2x.png",
+                "value":0,
+                "sliderType":0,
+                "type":"kBeautyFilterKeyEyesArea"
+
+            }, {
+                "title":"祛法令纹",
+                "icon":"MMBeautyUI.bundle/microSurgery/eyeOther@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/eyeOther_selected@2x.png",
+                "value":0,
+                "sliderType":0,
+                "type":"kBeautyFilterKeyNasolabialFoldsArea"
+
+            },
+            {
+               "title":"亮眼",
+               "icon":"MMBeautyUI.bundle/microSurgery/eyebrighten@2x.png",
+               "highlight":"MMBeautyUI.bundle/microSurgery/eyebrighten-selected@2x.png",
+               "value":0.0,
+               "sliderType":0,
+               "type":"eyeBrighten"
+
+           },{
+                "title":"白牙",
+                "icon":"MMBeautyUI.bundle/microSurgery/teethwhiten@2x.png",
+                "highlight":"MMBeautyUI.bundle/microSurgery/teethwhiten-selected@2x.png",
+                "value":0,
+                "sliderType":0,
+                "type":"teethWhiten"
+
+            },
+        ]
+    },
+    {
+        "name":"风格妆",
+        "type":"makeup",
+        "contents": [
+            {
+                "title": "原图",
+                "icon": "MMBeautyUI.bundle/none@2x.png",
+                "highlight": "",
+                "type": "makeup",
+                "value": 0,
+                "sliderType":0,
+                "identifier": "-1"
+            },{
+                "title": "黑童话",
+                "icon": "icon.png",
+                "highlight": "makeup_style/heitonghua",
+                "type": "makeup",
+                "value": 0.9,
+                "lut":0.4,
+                "sliderType":0,
+                "identifier": "1"
+            }
+        ]
+    },
+    {
+        "name":"美妆",
+        "type":"makeup_layers",
+        "contents": [
+            {
+                "title": "原图",
+                "icon": "MMBeautyUI.bundle/none@2x.png",
+                "highlight": "none",
+                "type": "makeup_layers",
+                "value": 0,
+                "sliderType":0,
+                "identifier": "-1"
+            }, {
+                "title": "口红",
+                "icon": "MMBeautyUI.bundle/makeup/makeup_lip@2x.png",
+                "highlight": "MMBeautyUI.bundle/makeup/makeup_lip_sel@2x.png",
+                "type": "makeup_layers",
+                "value": 0,
+                "sliderType":0,
+                "identifier": "1"
+            }, {
+                "title": "腮红",
+                "icon": "MMBeautyUI.bundle/makeup/makeup_cheek@2x.png",
+                "highlight": "MMBeautyUI.bundle/makeup/makeup_cheek_sel@2x.png",
+                "type": "makeup_layers",
+                "value": 0,
+                "sliderType":0,
+                "identifier": "1"
+            }, {
+                "title": "眼妆",
+                "icon": "MMBeautyUI.bundle/makeup/makeup_eyeshadow@2x.png",
+                "highlight": "MMBeautyUI.bundle/makeup/makeup_eyeshadow_sel@2x.png",
+                "type": "makeup_layers",
+                "value": 0,
+                "sliderType":0,
+                "identifier": "1"
+            }, {
+                "title": "眉毛",
+                "icon": "MMBeautyUI.bundle/makeup/makeup_eyebrow@2x.png",
+                "highlight": "MMBeautyUI.bundle/makeup/makeup_eyebrow_sel@2x.png",
+                "type": "makeup_layer",
+                "value": 0,
+                "sliderType":0,
+                "identifier": "1"
+            }, {
+                "title": "美瞳",
+                "icon": "MMBeautyUI.bundle/makeup/makeup_lenses@2x.png",
+                "highlight": "MMBeautyUI.bundle/makeup/makeup_lenses_sel@2x.png",
+                "type": "makeup_layer",
+                "value": 0,
+                "sliderType":0,
+                "identifier": "1"
+            }, {
+                "title": "修容",
+                "icon": "MMBeautyUI.bundle/makeup/makeup_trimming@2x.png",
+                "highlight": "MMBeautyUI.bundle/makeup/makeup_trimming_selmakeup_trimming_sel@2x.png",
+                "type": "makeup_layer",
+                "value": 0,
+                "sliderType":0,
+                "identifier": "1"
+            }
+        ]
+    },
+    {
+        "name":"滤镜",
+        "type":"lookup",
+        "contents": [
+            {
+                "title": "原图",
+                "icon": "MMBeautyUI.bundle/none@2x.png",
+                "highlight": "-1",
+                "type": "lookup",
+                "value": 0.0,
+                "identifier": "-1",
+                "index": 0
+            }, {
+                "title": "自然",
+                "icon": "85f9891a843f4d2b",
+                "highlight": "85f9891a843f4d2b",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "85f9891a843f4d2b",
+                "index": 1
+            }, {
+                "title": "酒红",
+                "icon": "1e56408d86d34ec3",
+                "highlight": "1e56408d86d34ec3",
+                "type": "lookup",
+                "value": 0.2,
+                "identifier": "1e56408d86d34ec3",
+                "index": 2
+            }, {
+                "title": "白皙",
+                "icon": "e66868c31a7c49f1",
+                "highlight": "e66868c31a7c49f1",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "e66868c31a7c49f1",
+                "index": 3
+            }, {
+                "title": "日系",
+                "icon": "3c5312c163f5671c",
+                "highlight": "3c5312c163f5671c",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "3c5312c163f5671c",
+                "index": 4
+            }, {
+                "title": "黑白",
+                "icon": "ea260182116c309c",
+                "highlight": "ea260182116c309c",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "ea260182116c309c",
+                "index": 5
+            }, {
+                "title": "柔和",
+                "icon": "03645b45a821ead4",
+                "highlight": "03645b45a821ead4",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "03645b45a821ead4",
+                "index": 6
+            }, {
+                "title": "私语",
+                "icon": "4209bb8c0a5c977c",
+                "highlight": "4209bb8c0a5c977c",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "4209bb8c0a5c977c",
+                "index": 8
+            }, {
+                "title": "暖光",
+                "icon": "7024eaba6b5c3586",
+                "highlight": "7024eaba6b5c3586",
+                "type": "lookup",
+                "value": 0.2,
+                "identifier": "7024eaba6b5c3586",
+                "index": 9
+            }, {
+                "title": "雪白",
+                "icon": "60b04491b92158ba",
+                "highlight": "60b04491b92158ba",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "60b04491b92158ba",
+                "index": 11
+            }, {
+                "title": "粉红",
+                "icon": "88d9c94ea552343e",
+                "highlight": "88d9c94ea552343e",
+                "type": "lookup",
+                "value": 0.25,
+                "identifier": "88d9c94ea552343e",
+                "index": 12
+            }, {
+                "title": "复古",
+                "icon": "12719f1a07d1a8b4",
+                "highlight": "12719f1a07d1a8b4",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "12719f1a07d1a8b4",
+                "index": 13
+            }, {
+                "title": "玫瑰",
+                "icon": "bdb9f994250f60ba",
+                "highlight": "bdb9f994250f60ba",
+                "type": "lookup",
+                "value": 0.25,
+                "identifier": "bdb9f994250f60ba",
+                "index": 14
+            }, {
+                "title": "蓝调",
+                "icon": "62c8a14d0d5ecbbe",
+                "highlight": "62c8a14d0d5ecbbe",
+                "type": "lookup",
+                "value": 0.1,
+                "identifier": "62c8a14d0d5ecbbe",
+                "index": 15
+            }, {
+                "title": "花香",
+                "icon": "35531f9a2cad7c90",
+                "highlight": "35531f9a2cad7c90",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "35531f9a2cad7c90",
+                "index": 16
+            }, {
+                "title": "轻氧",
+                "icon": "de285a5008ac6c45",
+                "highlight": "de285a5008ac6c45",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "de285a5008ac6c45",
+                "index": 17
+            }, {
+                "title": "元气",
+                "icon": "a91668a83fef4b8a",
+                "highlight": "a91668a83fef4b8a",
+                "type": "lookup",
+                "value": 0.2,
+                "identifier": "a91668a83fef4b8a",
+                "index": 18
+            }, {
+                "title": "郁金香",
+                "icon": "5fad86fe84cc10ad",
+                "highlight": "5fad86fe84cc10ad",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "5fad86fe84cc10ad",
+                "index": 19
+            }, {
+                "title": "温柔",
+                "icon": "6b49c50d69a6c01f",
+                "highlight": "6b49c50d69a6c01f",
+                "type": "lookup",
+                "value": 0.25,
+                "identifier": "6b49c50d69a6c01f",
+                "index": 20
+            }, {
+                "title": "蔷薇",
+                "icon": "55bb9e7dbe29c129",
+                "highlight": "55bb9e7dbe29c129",
+                "type": "lookup",
+                "value": 0.25,
+                "identifier": "55bb9e7dbe29c129",
+                "index": 21
+            }, {
+                "title": "康乃馨",
+                "icon": "541e5f5c70f8b930",
+                "highlight": "541e5f5c70f8b930",
+                "type": "lookup",
+                "value": 0.29,
+                "identifier": "541e5f5c70f8b930",
+                "index": 22
+            }, {
+                "title": "动人",
+                "icon": "318458850a0e654d",
+                "highlight": "318458850a0e654d",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "318458850a0e654d",
+                "index": 23
+            }, {
+                "title": "春日",
+                "icon": "a1351edbe1b8bebf",
+                "highlight": "a1351edbe1b8bebf",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "a1351edbe1b8bebf",
+                "index": 24
+            }, {
+                "title": "高冷",
+                "icon": "4a755c5694feb417",
+                "highlight": "4a755c5694feb417",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "4a755c5694feb417",
+                "index": 25
+            }, {
+                "title": "绿景",
+                "icon": "1ddcffbef3472d0f",
+                "highlight": "1ddcffbef3472d0f",
+                "type": "lookup",
+                "value": 0.2,
+                "identifier": "1ddcffbef3472d0f",
+                "index": 26
+            }, {
+                "title": "气氛",
+                "icon": "3402838ff6fda688",
+                "highlight": "3402838ff6fda688",
+                "type": "lookup",
+                "value": 0.15,
+                "identifier": "3402838ff6fda688",
+                "index": 27
+            }, {
+                "title": "奶茶",
+                "icon": "8385fbd233475613",
+                "highlight": "8385fbd233475613",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "8385fbd233475613",
+                "index": 28
+            }, {
+                "title": "氛围",
+                "icon": "0e1f134bff5dff00",
+                "highlight": "0e1f134bff5dff00",
+                "type": "lookup",
+                "value": 0.2,
+                "identifier": "0e1f134bff5dff00",
+                "index": 29
+            }, {
+                "title": "雾气",
+                "icon": "f8170a3a0a56dcb4",
+                "highlight": "f8170a3a0a56dcb4",
+                "type": "lookup",
+                "value": 0.2,
+                "identifier": "f8170a3a0a56dcb4",
+                "index": 30
+            }, {
+                "title": "紫罗兰",
+                "icon": "4328eb726c2900ae",
+                "highlight": "4328eb726c2900ae",
+                "type": "lookup",
+                "value": 0.2,
+                "identifier": "4328eb726c2900ae",
+                "index": 31
+            }, {
+                "title": "牡丹",
+                "icon": "58c136f18f8d9d98",
+                "highlight": "58c136f18f8d9d98",
+                "type": "lookup",
+                "value": 0.25,
+                "identifier": "58c136f18f8d9d98",
+                "index": 32
+            }, {
+                "title": "鲜明",
+                "icon": "b4506dd6aca8ac04",
+                "highlight": "b4506dd6aca8ac04",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "b4506dd6aca8ac04",
+                "index": 33
+            }, {
+                "title": "明亮",
+                "icon": "0c72973341684019",
+                "highlight": "0c72973341684019",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "0c72973341684019",
+                "index": 34
+            }, {
+                "title": "灰调",
+                "icon": "7b15c3c4f5450b7e",
+                "highlight": "7b15c3c4f5450b7e",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "7b15c3c4f5450b7e",
+                "index": 35
+            }, {
+                "title": "阳光",
+                "icon": "b2e86cf99ef71a49",
+                "highlight": "b2e86cf99ef71a49",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "b2e86cf99ef71a49",
+                "index": 36
+            }, {
+                "title": "海风",
+                "icon": "2c788f0018ece4b3",
+                "highlight": "2c788f0018ece4b3",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "2c788f0018ece4b3",
+                "index": 37
+            }, {
+                "title": "海洋",
+                "icon": "3a8bf0be340b3eae",
+                "highlight": "3a8bf0be340b3eae",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "3a8bf0be340b3eae",
+                "index": 38
+            }, {
+                "title": "海棠",
+                "icon": "6b0d0b6d81fc412f",
+                "highlight": "6b0d0b6d81fc412f",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "6b0d0b6d81fc412f",
+                "index": 39
+            }, {
+                "title": "天空",
+                "icon": "0d9e04dcd6cac8b0",
+                "highlight": "0d9e04dcd6cac8b0",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "0d9e04dcd6cac8b0",
+                "index": 40
+            }, {
+                "title": "仲夏",
+                "icon": "f8e996ebd769f6e3",
+                "highlight": "f8e996ebd769f6e3",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "f8e996ebd769f6e3",
+                "index": 41
+            }, {
+                "title": "小巷",
+                "icon": "439e19a8762fb09f",
+                "highlight": "439e19a8762fb09f",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "439e19a8762fb09f",
+                "index": 42
+            }, {
+                "title": "深海",
+                "icon": "b74532733de61a7b",
+                "highlight": "b74532733de61a7b",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "b74532733de61a7b",
+                "index": 43
+            }, {
+                "title": "黄昏",
+                "icon": "484651d6a0f10a9b",
+                "highlight": "484651d6a0f10a9b",
+                "type": "lookup",
+                "value": 0.5,
+                "identifier": "484651d6a0f10a9b",
+                "index": 44
+            }, {
+                "title": "夕阳",
+                "icon": "a720ef157136e789",
+                "highlight": "a720ef157136e789",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "a720ef157136e789",
+                "index": 45
+            }, {
+                "title": "层次",
+                "icon": "1a2e09185646e82b",
+                "highlight": "1a2e09185646e82b",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "1a2e09185646e82b",
+                "index": 46
+            }, {
+                "title": "城市",
+                "icon": "5532fa52ddd368f7",
+                "highlight": "5532fa52ddd368f7",
+                "type": "lookup",
+                "value": 0.1,
+                "identifier": "5532fa52ddd368f7",
+                "index": 47
+            }, {
+                "title": "瑞士",
+                "icon": "3d395d8494757e17",
+                "highlight": "3d395d8494757e17",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "3d395d8494757e17",
+                "index": 48
+            }, {
+                "title": "水雾",
+                "icon": "808adb9957fd168f",
+                "highlight": "808adb9957fd168f",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "808adb9957fd168f",
+                "index": 49
+            }, {
+                "title": "京都",
+                "icon": "ddfef278981e2ce2",
+                "highlight": "ddfef278981e2ce2",
+                "type": "lookup",
+                "value": 0.6,
+                "identifier": "ddfef278981e2ce2",
+                "index": 50
+            }, {
+                "title": "粉雾",
+                "icon": "63cb03e64a01a525",
+                "highlight": "63cb03e64a01a525",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "63cb03e64a01a525",
+                "index": 51
+            }, {
+                "title": "清冷",
+                "icon": "900471e542862fa9",
+                "highlight": "900471e542862fa9",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "900471e542862fa9",
+                "index": 52
+            }, {
+                "title": "海岸",
+                "icon": "a84139d5cd3175ef",
+                "highlight": "a84139d5cd3175ef",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "a84139d5cd3175ef",
+                "index": 53
+            }, {
+                "title": "纯真",
+                "icon": "6acced56f1ae6347",
+                "highlight": "6acced56f1ae6347",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "6acced56f1ae6347",
+                "index": 54
+            }, {
+                "title": "清森",
+                "icon": "3f08ce2545ad765d",
+                "highlight": "3f08ce2545ad765d",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "3f08ce2545ad765d",
+                "index": 55
+            }, {
+                "title": "纯净",
+                "icon": "d23815b21e6f9186",
+                "highlight": "d23815b21e6f9186",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "d23815b21e6f9186",
+                "index": 56
+            }, {
+                "title": "芝士",
+                "icon": "cfd4e1a5417da3b2",
+                "highlight": "cfd4e1a5417da3b2",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "cfd4e1a5417da3b2",
+                "index": 57
+            }, {
+                "title": "治愈",
+                "icon": "47d22ffbe8c354f0",
+                "highlight": "47d22ffbe8c354f0",
+                "type": "lookup",
+                "value": 0.5,
+                "identifier": "47d22ffbe8c354f0",
+                "index": 58
+            }, {
+                "title": "奶油",
+                "icon": "fd14e98e90985cde",
+                "highlight": "fd14e98e90985cde",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "fd14e98e90985cde",
+                "index": 59
+            }, {
+                "title": "雪梨",
+                "icon": "e89cb55eb7e3b86d",
+                "highlight": "e89cb55eb7e3b86d",
+                "type": "lookup",
+                "value": 0.6,
+                "identifier": "e89cb55eb7e3b86d",
+                "index": 60
+            }, {
+                "title": "西柚",
+                "icon": "0811e1d6c2b2c0bb",
+                "highlight": "0811e1d6c2b2c0bb",
+                "type": "lookup",
+                "value": 0.3,
+                "identifier": "0811e1d6c2b2c0bb",
+                "index": 61
+            }, {
+                "title": "暖食",
+                "icon": "6a433d68287dc569",
+                "highlight": "6a433d68287dc569",
+                "type": "lookup",
+                "value": 0.6,
+                "identifier": "6a433d68287dc569",
+                "index": 62
+            }, {
+                "title": "酸奶",
+                "icon": "cde8d9197d229ccc",
+                "highlight": "cde8d9197d229ccc",
+                "type": "lookup",
+                "value": 0.5,
+                "identifier": "cde8d9197d229ccc",
+                "index": 63
+            }, {
+                "title": "新鲜",
+                "icon": "9bfc4137869a6cd8",
+                "highlight": "9bfc4137869a6cd8",
+                "type": "lookup",
+                "value": 0.7,
+                "identifier": "9bfc4137869a6cd8",
+                "index": 64
+            }, {
+                "title": "清凉",
+                "icon": "c3080c4b5b94edc4",
+                "highlight": "c3080c4b5b94edc4",
+                "type": "lookup",
+                "value": 0.6,
+                "identifier": "c3080c4b5b94edc4",
+                "index": 65
+            }, {
+                "title": "草莓",
+                "icon": "4eb55cf6244bcc81",
+                "highlight": "4eb55cf6244bcc81",
+                "type": "lookup",
+                "value": 0.7,
+                "identifier": "4eb55cf6244bcc81",
+                "index": 66
+            }, {
+                "title": "橘子",
+                "icon": "393c8c97170dacd7",
+                "highlight": "393c8c97170dacd7",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "393c8c97170dacd7",
+                "index": 67
+            }, {
+                "title": "红柿",
+                "icon": "6509420363990953",
+                "highlight": "6509420363990953",
+                "type": "lookup",
+                "value": 0.5,
+                "identifier": "6509420363990953",
+                "index": 68
+            }, {
+                "title": "油画",
+                "icon": "5ed57af3fb0807e4",
+                "highlight": "5ed57af3fb0807e4",
+                "type": "lookup",
+                "value": 0.7,
+                "identifier": "5ed57af3fb0807e4",
+                "index": 69
+            }, {
+                "title": "清茶",
+                "icon": "1d94637e6263d79d",
+                "highlight": "1d94637e6263d79d",
+                "type": "lookup",
+                "value": 0.3,
+                "identifier": "1d94637e6263d79d",
+                "index": 70
+            }, {
+                "title": "汽水",
+                "icon": "03d029ebe562d6b8",
+                "highlight": "03d029ebe562d6b8",
+                "type": "lookup",
+                "value": 0.5,
+                "identifier": "03d029ebe562d6b8",
+                "index": 71
+            }, {
+                "title": "柠檬",
+                "icon": "c7468ad88e9efd8b",
+                "highlight": "c7468ad88e9efd8b",
+                "type": "lookup",
+                "value": 0.6,
+                "identifier": "c7468ad88e9efd8b",
+                "index": 72
+            }, {
+                "title": "可人",
+                "icon": "89de8bc54f616288",
+                "highlight": "89de8bc54f616288",
+                "type": "lookup",
+                "value": 0.9,
+                "identifier": "89de8bc54f616288",
+                "index": 73
+            }, {
+                "title": "食欲",
+                "icon": "4175928c897da909",
+                "highlight": "4175928c897da909",
+                "type": "lookup",
+                "value": 0.8,
+                "identifier": "4175928c897da909",
+                "index": 74
+            }, {
+                "title": "蜜糖",
+                "icon": "09c14ac85733f58d",
+                "highlight": "09c14ac85733f58d",
+                "type": "lookup",
+                "value": 0.8,
+                "identifier": "09c14ac85733f58d",
+                "index": 75
+            }, {
+                "title": "明艳",
+                "icon": "0ec1d943ec87623f",
+                "highlight": "0ec1d943ec87623f",
+                "type": "lookup",
+                "value": 0.4,
+                "identifier": "0ec1d943ec87623f",
+                "index": 76
+            }, {
+                "title": "果蔬",
+                "icon": "afdf052fa63e0497",
+                "highlight": "afdf052fa63e0497",
+                "type": "lookup",
+                "value": 0.5,
+                "identifier": "afdf052fa63e0497",
+                "index": 77
+            }, {
+                "title": "暗色",
+                "icon": "bc3c870236291ecb",
+                "highlight": "bc3c870236291ecb",
+                "type": "lookup",
+                "value": 0.6,
+                "identifier": "bc3c870236291ecb",
+                "index": 78
+            }, {
+                "title": "甜酱",
+                "icon": "26259ca3ebcc3de4",
+                "highlight": "26259ca3ebcc3de4",
+                "type": "lookup",
+                "value": 0.8,
+                "identifier": "26259ca3ebcc3de4",
+                "index": 79
+            }, {
+                "title": "凉食",
+                "icon": "0f245466d5e9f367",
+                "highlight": "0f245466d5e9f367",
+                "type": "lookup",
+                "value": 0.6,
+                "identifier": "0f245466d5e9f367",
+                "index": 80
+            }
+        ]
+    }
+]

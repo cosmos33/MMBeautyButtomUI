@@ -1,0 +1,229 @@
+[
+    {
+        "name":"口红",
+        "type":"makeup_layer",
+        "contents": [
+            {
+                "title": "无",
+                "icon": "MMBeautyUI.bundle/none@2x.png",
+                "highlight": "MMBeautyUI.bundle/none@2x.png",
+                "type": "lip",
+                "value": 0,
+                "sliderType":0,
+                "selected":1,
+                "identifier": "-1"
+            },{
+                "title": "流光红",
+                "icon": "icon.png",
+                "highlight": "makeup_lips/lut_liuguanghong",
+                "type": "lip",
+                "value": 0.7,
+                "sliderType":0,
+                "selected":0,
+                "identifier": "1"
+            }
+        ]
+    }, {
+        "name":"腮红",
+        "type":"makeup_layer",
+        "contents": [
+            {
+                "title": "无",
+                "icon": "MMBeautyUI.bundle/none@2x.png",
+                "highlight": "MMBeautyUI.bundle/none@2x.png",
+                "type": "blush",
+                "value": 0,
+                "sliderType":0,
+                "selected":1,
+                "identifier": "-1"
+            }, {
+                "title": "自然",
+                "icon": "icon.png",
+                "highlight": "makeup_cheek/ziran",
+                "type": "blush",
+                "value": 0.4,
+                "sliderType":0,
+                "identifier": "1"
+            }
+        ]
+    }, {
+        "name":"眼妆",
+        "type":"makeup_layer",
+        "contents": [
+            {
+                "title": "无",
+                "icon": "MMBeautyUI.bundle/none@2x.png",
+                "highlight": "MMBeautyUI.bundle/none@2x.png",
+                "type": "eyeshadow",
+                "value": 0,
+                "sliderType":0,
+                "selected":1,
+                "identifier": "-1"
+            },{
+                "title": "星河",
+                "icon": "icon.png",
+                "highlight": "makeup_eyeshadow/xinghe",
+                "type": "eyeshadow",
+                "value": 0.6,
+                "sliderType":0,
+                "identifier": "1"
+            }
+        ]
+    }, {
+        "name":"眉毛",
+        "type":"makeup_layer",
+        "contents": [
+            {
+                "title": "无",
+                "icon": "MMBeautyUI.bundle/none@2x.png",
+                "highlight": "MMBeautyUI.bundle/none@2x.png",
+                "type": "eyebrow",
+                "value": 0,
+                "sliderType":0,
+                "selected":1,
+                "identifier": "-1"
+            },
+            {
+               "title": "少女",
+               "icon": "icon.png",
+               "highlight": "makeup_eyebrow/shaonv",
+               "type": "eyebrow",
+               "value": 0.5,
+               "sliderType":0,
+               "identifier": "1"
+           }
+        ]
+    }, {
+        "name":"美瞳",
+        "type":"makeup_layer",
+        "contents": [
+            {
+                "title": "无",
+                "icon": "MMBeautyUI.bundle/none@2x.png",
+                "highlight": "MMBeautyUI.bundle/none@2x.png",
+                "type": "pupil",
+                "value": 0,
+                "sliderType":0,
+                "selected":1,
+                "identifier": "-1"
+            },
+            {
+               "title": "碎钻",
+               "icon": "icon.png",
+               "highlight": "makeup_pupil/suizuan",
+               "type": "pupil",
+               "value": 0.4,
+               "sliderType":0,
+               "identifier": "1"
+           }
+        ]
+    }, {
+        "name":"修容",
+        "type":"makeup_layer",
+        "contents": [
+            {
+                "title": "无",
+                "icon": "MMBeautyUI.bundle/none@2x.png",
+                "highlight": "MMBeautyUI.bundle/none@2x.png",
+                "type": "facial",
+                "value": 0,
+                "sliderType":0,
+                "selected":1,
+                "identifier": "-1"
+            }, {
+                "title": "日常",
+                "icon": "icon.png",
+                "highlight": "makeup_facial/richang",
+                "type": "facial",
+                "value": 0.4,
+                "sliderType":0,
+                "identifier": "1"
+            }
+        ]
+    },
+    {
+        "name":"美白",
+        "type":"beauty",
+        "contents": [
+            {
+                "title": "关闭",
+                "icon": "MMBeautyUI.bundle/none@2x.png",
+                "highlight": "none",
+                "type": "beauty_white",
+                "value": 0,
+                "version":"0",
+                "sliderType":0,
+                "selected":0,
+                "identifier": "-1"
+            }, {
+                "title": "风格1",
+                "icon": "MMBeautyUI.bundle/beauty/icon_1-1@2x.png",
+                "highlight": "makeup_facial/xiurong01",
+                "type": "beauty_white",
+                "value": 0.4,
+                "sliderType":0,
+                "version":"0",
+                "selected":1,
+                "identifier": "1"
+            }, {
+                "title": "风格2",
+                "icon": "MMBeautyUI.bundle/beauty/icon_1-2@2x.png",
+                "highlight": "makeup_facial/xiurong02",
+                "type": "beauty_white",
+                "value": 0.4,
+                "sliderType":0,
+                "version":"1",
+                "selected":0,
+                "identifier": "1"
+            }, {
+                "title": "风格3",
+                "icon": "MMBeautyUI.bundle/beauty/icon_1-3@2x.png",
+                "highlight": "makeup_facial/xiurong03",
+                "type": "beauty_white",
+                "value": 0.4,
+                "sliderType":0,
+                "version":"2",
+                "selected":0,
+                "identifier": "1"
+            }
+        ]
+    },
+    {
+        "name":"红润",
+        "type":"beauty",
+        "contents": [
+            {
+                "title": "关闭",
+                "icon": "MMBeautyUI.bundle/none@2x.png",
+                "highlight": "none",
+                "type": "beauty_redden",
+                "value": 0,
+                "sliderType":0,
+                "version":"0",
+                "selected":0,
+                "identifier": "-1"
+            }, {
+                "title": "风格1",
+                "icon": "MMBeautyUI.bundle/beauty/icon_1-1@2x.png",
+                "highlight": "makeup_facial/xiurong01",
+                "type": "beauty_redden",
+                "value": 0.5,
+                "sliderType":0,
+                "version":"0",
+                "selected":1,
+                "identifier": "1"
+            }, {
+                "title": "风格2",
+                "icon": "MMBeautyUI.bundle/beauty/icon_1-2@2x.png",
+                "highlight": "makeup_facial/xiurong02",
+                "type": "beauty_redden",
+                "value": 0.5,
+                "version":"1",
+                "sliderType":0,
+                "selected":0,
+                "identifier": "1"
+            }
+        ]
+    }
+]
+

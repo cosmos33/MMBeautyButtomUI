@@ -1,0 +1,29 @@
+{
+  "name": "MMBeautyUI",
+  "version": "0.1.0",
+  "summary": "A short description of MMBeautyUI.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/sunfei_fish@sina.cn/MMBeautyKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "sunfei_fish@sina.cn": "sun.fei@immomo.com"
+  },
+  "source": {
+    "git": "https://github.com/sunfei_fish@sina.cn/MMBeautyKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "MMBeautyUI/**/*.{h,m}",
+  "public_header_files": "MMBeautyUI/**/*.h",
+  "resources": [
+    "MMBeautyUI/*.bundle",
+    "MMBeautyUI/*.geojson"
+  ],
+  "frameworks": "UIKit",
+  "static_framework": true
+}
