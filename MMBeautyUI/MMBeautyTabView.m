@@ -211,7 +211,7 @@
     [grayLineView.bottomAnchor constraintEqualToAnchor:hStackView.bottomAnchor].active = YES;
     [grayLineView.heightAnchor constraintEqualToConstant:1].active = YES;
 }
-extern NSArray * kMMBeautyKitOnceBeuatyArray();
+extern NSArray * kMMBeautyKitOnceBeuatyArray(void);
 - (void)updateLabel:(CGFloat)sliderValue{
     if (_selectedIndex.section == 0) {
         return;
