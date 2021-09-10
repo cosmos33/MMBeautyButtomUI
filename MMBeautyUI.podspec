@@ -25,7 +25,7 @@ TODO: Add long description of the pod here.
 
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'sunfei_fish@sina.cn' => 'sun.fei@immomo.com' }
-  s.source           = { :git => 'https://github.com/sunfei_fish@sina.cn/MMBeautyKit.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/cosmos33/MMBeautyButtomUI.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '11.0'
