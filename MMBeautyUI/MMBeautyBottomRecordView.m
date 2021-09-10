@@ -8,6 +8,16 @@
 
 #import "MMBeautyBottomRecordView.h"
 #import "MMBeautyBottomView.h"
+extern NSArray * kMMBeautyKitOnceBeuatyArray(){
+    static dispatch_once_t onceToken;
+    static NSArray * array = nil;
+    dispatch_once(&onceToken, ^{
+        NSURL *path = [[NSBundle bundleForClass:MMBeautyBottomRecordView.class] URLForResource:@"MMBeautyKit" withExtension:@"bundle"];
+        NSURL *jsonPath = [[NSBundle bundleWithURL:path] URLForResource:@"MMBeautyAutoModel" withExtension:@"geojson"];
+        array = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:jsonPath] options:0 error:nil];
+    });
+    return array;
+}
 
 
 @interface MMBeautyBottomRecordView ()
@@ -31,16 +41,6 @@ static NSArray * kMMBeautyAutoModelArray(){
     return array;
 }
 
-static NSArray * kMMBeautyKitOnceBeuatyArray(){
-    static dispatch_once_t onceToken;
-    static NSArray * array = nil;
-    dispatch_once(&onceToken, ^{
-        NSURL *path = [[NSBundle bundleForClass:MMBeautyBottomRecordView.class] URLForResource:@"MMBeautyKit" withExtension:@"bundle"];
-        NSURL *jsonPath = [[NSBundle bundleWithURL:path] URLForResource:@"MMBeautyAutoModel" withExtension:@"geojson"];
-        array = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfURL:jsonPath] options:0 error:nil];
-    });
-    return array;
-}
 
 @implementation MMBeautyBottomRecordView
 
@@ -94,6 +94,12 @@ static NSArray * kMMBeautyKitOnceBeuatyArray(){
 }
 
 - (void)updateModelValueWithOnceBeautyModel:(MMBottomViewModelItem *)model{
+    // 只有包含 美颜 微整形 一键美颜 才会调整一键美颜中的参数
+    if (!((self.itemOptions & MMBeautyUIItemKeyMicroSurgery
+        && self.itemOptions & MMBeautyUIItemKeyOnceBeauty &&
+        self.itemOptions & MMBeautyUIItemKeyBeauty ) || self.itemOptions & MMBeautyUIItemKeyAll)) {
+        return;
+    }
     NSArray *itemArr = [kMMBeautyKitOnceBeuatyArray() objectAtIndex:model.identifier.intValue];
     MMBottomViewModel *micSurModel = nil;
     MMBottomViewModel *beautyModel = nil;
@@ -114,7 +120,6 @@ static NSArray * kMMBeautyKitOnceBeuatyArray(){
         }
     }
     [itemArr enumerateObjectsUsingBlock:^(NSDictionary * obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSLog(@"%@",obj);
         for (MMBottomViewModelItem *beauty in beautyModel.contents) {
             if ([beauty.title isEqualToString:obj[@"title"]]) {
                 NSNumber *number = [obj objectForKey:@"value"];
@@ -137,24 +142,70 @@ static NSArray * kMMBeautyKitOnceBeuatyArray(){
 - (NSArray<MMBottomViewModel *> *)getModelWithOptions:(MMBeautyUIItemKeyOptions)options{
     NSMutableArray<MMBottomViewModel *> *models = [NSMutableArray array];
     if (options & MMBeautyUIItemKeyOnceBeauty || options == MMBeautyUIItemKeyAll) {
-        NSDictionary *dict = [kMMBeautyAutoModelArray() objectAtIndex:0];
+        NSDictionary *dict = nil;
+        for (NSDictionary *tmpDic in kMMBeautyAutoModelArray()) {
+            if ([[tmpDic objectForKey:@"name"] isEqualToString:@"一键美颜"]) {
+                dict = tmpDic;
+                break;
+            }
+        }
         MMBottomViewModel *model = [[MMBottomViewModel alloc] initWithItem:dict];
         [models addObject:model];
     }
     if (options & MMBeautyUIItemKeyBeauty || options == MMBeautyUIItemKeyAll) {
-        [models addObject:[[MMBottomViewModel alloc] initWithItem:[kMMBeautyAutoModelArray() objectAtIndex:1]]];
+        NSDictionary *dict = nil;
+        for (NSDictionary *tmpDic in kMMBeautyAutoModelArray()) {
+            if ([[tmpDic objectForKey:@"name"] isEqualToString:@"美颜"]) {
+                dict = tmpDic;
+                break;
+            }
+        }
+        MMBottomViewModel *model = [[MMBottomViewModel alloc] initWithItem:dict];
+        [models addObject:model];
     }
     if (options & MMBeautyUIItemKeyMicroSurgery || options == MMBeautyUIItemKeyAll) {
-        [models addObject:[[MMBottomViewModel alloc] initWithItem:[kMMBeautyAutoModelArray() objectAtIndex:2]]];
+        NSDictionary *dict = nil;
+        for (NSDictionary *tmpDic in kMMBeautyAutoModelArray()) {
+            if ([[tmpDic objectForKey:@"name"] isEqualToString:@"微整形"]) {
+                dict = tmpDic;
+                break;
+            }
+        }
+        MMBottomViewModel *model = [[MMBottomViewModel alloc] initWithItem:dict];
+        [models addObject:model];
     }
     if (options & MMBeautyUIItemKeyMakeupStyle || options == MMBeautyUIItemKeyAll) {
-        [models addObject:[[MMBottomViewModel alloc] initWithItem:[kMMBeautyAutoModelArray() objectAtIndex:3]]];
+        NSDictionary *dict = nil;
+        for (NSDictionary *tmpDic in kMMBeautyAutoModelArray()) {
+            if ([[tmpDic objectForKey:@"name"] isEqualToString:@"风格妆"]) {
+                dict = tmpDic;
+                break;
+            }
+        }
+        MMBottomViewModel *model = [[MMBottomViewModel alloc] initWithItem:dict];
+        [models addObject:model];
     }
     if (options & MMBeautyUIItemKeyMakeup || options == MMBeautyUIItemKeyAll) {
-        [models addObject:[[MMBottomViewModel alloc] initWithItem:[kMMBeautyAutoModelArray() objectAtIndex:4]]];
+        NSDictionary *dict = nil;
+        for (NSDictionary *tmpDic in kMMBeautyAutoModelArray()) {
+            if ([[tmpDic objectForKey:@"name"] isEqualToString:@"美妆"]) {
+                dict = tmpDic;
+                break;
+            }
+        }
+        MMBottomViewModel *model = [[MMBottomViewModel alloc] initWithItem:dict];
+        [models addObject:model];
     }
     if (options & MMBeautyUIItemKeyLookUp || options == MMBeautyUIItemKeyAll) {
-        [models addObject:[[MMBottomViewModel alloc] initWithItem:[kMMBeautyAutoModelArray() objectAtIndex:5]]];
+        NSDictionary *dict = nil;
+        for (NSDictionary *tmpDic in kMMBeautyAutoModelArray()) {
+            if ([[tmpDic objectForKey:@"name"] isEqualToString:@"滤镜"]) {
+                dict = tmpDic;
+                break;
+            }
+        }
+        MMBottomViewModel *model = [[MMBottomViewModel alloc] initWithItem:dict];
+        [models addObject:model];
     }
     return models;
 }

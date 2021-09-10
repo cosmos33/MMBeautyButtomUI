@@ -23,32 +23,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "591125BD-BA94-478C-9BDF-711BB4500362"
+            uuid = "201A2E81-7907-4DE2-B470-3E45FDA1961F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MMBeautyUI/MMBeautyBottomRecordView.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "-updateModelValueWithOnceBeautyModel:"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "-getModelWithOptions:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D151575C-8A4F-4213-8EAA-4EC5C04A4665"
+            uuid = "B22A1EEC-283E-4431-9EFE-9574725FFEB8"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MMBeautyUI/MMBeautyBottomRecordView.m"
+            filePath = "MMBeautyUI/MMBeautyTabView.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "-updateModelValueWithOnceBeautyModel:"
+            startingLineNumber = "517"
+            endingLineNumber = "517"
+            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4054947B-F5AC-460B-927F-1AFFBF111788"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MMBeautyUI/MMBeautyTabView.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "-updateLabel:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

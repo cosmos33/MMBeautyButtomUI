@@ -25,7 +25,6 @@
 @property (nonatomic, strong) MMBottomViewModel *lastMakeupItem;
 @property (nonatomic, assign) NSInteger lastSelectedLookUpIndex;
 
-
 @property (nonatomic , strong) MMBottomViewBuautyModelItem *onceBeautyModel;
 @end
 
@@ -212,7 +211,7 @@
     [grayLineView.bottomAnchor constraintEqualToAnchor:hStackView.bottomAnchor].active = YES;
     [grayLineView.heightAnchor constraintEqualToConstant:1].active = YES;
 }
-
+extern NSArray * kMMBeautyKitOnceBeuatyArray();
 - (void)updateLabel:(CGFloat)sliderValue{
     if (_selectedIndex.section == 0) {
         return;
@@ -240,16 +239,17 @@
         return;
     }
     if (self.onceBeautyModel) {
-        for (MMBottomViewModelItem *item in self.onceBeautyModel.contents) {
-            if ([item.title isEqualToString:curItem.title]) {
-                number = [NSNumber numberWithDouble:item.curPos * 100];
-                NSString *itemStr = [formatter stringFromNumber:number];
-                if (![itemStr isEqualToString:str]) {
+        NSDictionary *dict = [kMMBeautyKitOnceBeuatyArray() objectAtIndex:self.lastSelectedOnceIndexpath.row];
+        MMBottomViewModelItem *item = [curModel.contents objectAtIndex:self.selectedIndex.row];
+        for (NSDictionary *d in dict) {
+            NSString *name = [d objectForKey:@"title"];
+            if ([item.title isEqualToString:name]) {
+                NSNumber *number = [d objectForKey:@"value"];
+                if (str.floatValue != number.floatValue) {
                     self.onceBeautyModel = nil;
                 }
             }
         }
-        
     }
 }
 
