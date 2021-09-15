@@ -2,13 +2,13 @@
 source 'https://github.com/cosmos33/MMSpecs.git'
 source 'https://cdn.cocoapods.org/'
 use_frameworks! :linkage=>:static
-platform :ios, '11.0'
+platform :ios, '10.0'
 
 target 'MMBeautyBottomUI' do
   pod 'MMBeautyUI',:path=>'./'
 
   
-  pod 'MMBeautyKit', '2.8.2-interact'
+   pod 'MMBeautyKit', '2.8.2-interact'
    pod 'MMBeautyMedia','2.8.1'
    pod 'MMCV','2.8.1'
    pod 'MetalPetal/Static', '1.13.0', :source => 'https://github.com/cosmos33/MMSpecs.git'

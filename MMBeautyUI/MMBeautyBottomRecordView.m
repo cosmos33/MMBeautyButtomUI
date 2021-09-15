@@ -8,6 +8,8 @@
 
 #import "MMBeautyBottomRecordView.h"
 #import "MMBeautyBottomView.h"
+#import <MMBeautyKit/MMBeautyKit-umbrella.h>
+
 extern NSArray * kMMBeautyKitOnceBeuatyArray(){
     static dispatch_once_t onceToken;
     static NSArray * array = nil;
@@ -62,7 +64,13 @@ static NSArray * kMMBeautyAutoModelArray(){
         
         beautyView.reset = ^(MMBottomViewModelItem * _Nonnull item) {
             __strong typeof(self) sself = wself;
-            sself.reset ? sself.reset(item) : nil;
+            NSString *str;
+            if ([item.model.type isEqualToString:@"beauty"]) {
+                str = @"beauty";
+            } else if ([item.model.type isEqualToString:@"OneClickbeauty"]){
+                str = @"OneClickbeauty";
+            }
+            sself.reset ? sself.reset(str,0) : nil;
         };
         
         beautyView.originImage = ^(BOOL touchInside) {

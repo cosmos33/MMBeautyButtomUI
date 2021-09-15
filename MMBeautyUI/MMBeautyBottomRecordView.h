@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "MMBottomViewModel.h"
 
+typedef NSString *MMBeautyUIStringKey NS_STRING_ENUM;
+
+
 typedef NS_ENUM(NSUInteger, MMBeautyUIItemKey) {
     MMBeautyUIItemKey_OnceBeauty, // 一键美颜
     MMBeautyUIItemKey_Beauty,
@@ -35,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithOptions:(MMBeautyUIItemKeyOptions)options andFrame:(CGRect)frame;
 
-@property (nonatomic, copy) void(^reset)(MMBottomViewModelItem *item);
+@property (nonatomic, copy) void(^reset)(NSString * key,CGFloat value);
 @property (nonatomic, copy) void(^valueChaged)(MMBottomViewModelItem *item, NSInteger type);
 @property (nonatomic, copy) void(^selectedModel)(MMBottomViewModelItem *item);
 
