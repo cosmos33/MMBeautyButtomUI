@@ -55,14 +55,14 @@
                 "highlight":"MMBeautyUI.bundle/beauty/smooth-selected@2x.png",
                 "value":0.7,
                 "sliderType":0,
-                "type":"kBeautyFilterKeySmooth"
+                "type":"skin_smooth"
             }, {
                 "title":"美白",
                 "icon":"MMBeautyUI.bundle/beauty/skinWhiten@2x.png",
                 "highlight":"MMBeautyUI.bundle/beauty/skinWhiten-selected@2x.png",
                 "value":0.4,
                 "sliderType":0,
-                "type":"kBeautyFilterKeyWhitening"
+                "type":"skin_whitening"
 
             }, {
                 "title":"红润",
