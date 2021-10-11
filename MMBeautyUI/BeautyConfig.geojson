@@ -88,6 +88,14 @@
                 "sliderType":0,
                 "type":"thinFace"
 
+            },{
+                "title":"锐化",
+                "icon":"MMBeautyUI.bundle/beauty/sharpen@2x.png",
+                "highlight":"MMBeautyUI.bundle/beauty/sharpen-selected@2x.png",
+                "value":0.7,
+                "sliderType":0,
+                "type":"skin_sharpen"
+
             }
         ]
     },
