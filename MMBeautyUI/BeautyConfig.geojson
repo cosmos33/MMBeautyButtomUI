@@ -355,7 +355,7 @@
             }, {
                 "title": "修容",
                 "icon": "MMBeautyUI.bundle/makeup/makeup_trimming@2x.png",
-                "highlight": "MMBeautyUI.bundle/makeup/makeup_trimming_selmakeup_trimming_sel@2x.png",
+                "highlight": "MMBeautyUI.bundle/makeup/makeup_trimming_sel@2x.png",
                 "type": "makeup_layer",
                 "value": 0,
                 "sliderType":0,
