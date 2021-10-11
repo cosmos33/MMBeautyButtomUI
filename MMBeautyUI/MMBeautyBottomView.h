@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) void(^selectedModel)(MMBottomViewModelItem *item);
 @property (nonatomic, copy) void(^clickSliderView)(void);
 @property (nonatomic, copy) void(^originImage)(BOOL touchInside);
-
+@property (nonatomic, copy) void(^backItemClick)(void);
 - (instancetype)initWithFrame:(CGRect)frame photoEdit:(BOOL)photoEdit;
 
 - (void)selectTab:(NSInteger)tabIndex;

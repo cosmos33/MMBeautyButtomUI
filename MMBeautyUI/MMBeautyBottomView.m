@@ -124,7 +124,9 @@
             slider.slider.hidden = YES;
             slider.valueLabel.hidden = YES;
         }
-   
+        if (indexPath.row == -100) {
+            sself.backItemClick ? sself.backItemClick() : nil;
+        }
     };
     
     _tabView = tabView;

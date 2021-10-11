@@ -61,7 +61,10 @@ static NSArray * kMMBeautyAutoModelArray(){
             __strong typeof(self) sself = wself;
             sself.valueChaged ? sself.valueChaged(item, type) : nil;
         };
-        
+        beautyView.backItemClick = ^{
+            __strong typeof(self) sself = wself;
+            sself.backItemClick ? sself.backItemClick() : nil;
+        };
         beautyView.reset = ^(MMBottomViewModelItem * _Nonnull item) {
             __strong typeof(self) sself = wself;
             NSString *str;

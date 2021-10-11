@@ -44,6 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) void(^originImage)(BOOL touchInside);
 @property (nonatomic, copy) void(^clickSliderView)(void);
+@property (nonatomic, copy) void(^backItemClick)(void);
 
 - (NSArray *)getAllselectedMakeUpItems;
 
