@@ -246,7 +246,7 @@
                 "highlight":"MMBeautyUI.bundle/microSurgery/eyebag_selected@2x.png",
                 "value":0,
                 "sliderType":0,
-                "type":"kBeautyFilterKeyEyesArea"
+                "type":"eyesArea"
 
             }, {
                 "title":"祛法令纹",
@@ -254,7 +254,7 @@
                 "highlight":"MMBeautyUI.bundle/microSurgery/eyeOther_selected@2x.png",
                 "value":0,
                 "sliderType":0,
-                "type":"kBeautyFilterKeyNasolabialFoldsArea"
+                "type":"nasolabialFoldsArea"
 
             },
             {
