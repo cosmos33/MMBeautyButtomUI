@@ -2,8 +2,10 @@
     "name": "pupil",
     "makeup": [
         {
-            "type": "pupil",
-            "folder": "pupil"
+            "type": "makeup_pupil",
+            "resources": ["pupil_suizuan/pupil.png"],
+            "blendMode": "Normal"
         }
     ]
 }
+

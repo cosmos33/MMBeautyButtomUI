@@ -1,9 +1,11 @@
 {
-    "name": "lip",
+    "name": "lips",
     "makeup": [
         {
-            "type": "lip",
-            "folder": "lip"
+            "type": "makeup_lips",
+            "resources": ["lip_liuguanghong/lookup.png"],
+            "blendMode": "LutMultiply"
         }
     ]
 }
+

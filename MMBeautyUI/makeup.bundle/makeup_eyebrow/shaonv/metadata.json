@@ -2,8 +2,11 @@
     "name": "eyebrow",
     "makeup": [
         {
-            "type": "eyebrow",
-            "folder": "eyebrow"
+            "type": "makeup_eyebrow",
+            "resources": ["eyebrow_shaonv/eyebrow.png"],
+            "blendMode": "Normal"
         }
     ]
 }
+
+

@@ -55,14 +55,14 @@
                 "highlight":"MMBeautyUI.bundle/beauty/smooth-selected@2x.png",
                 "value":0.7,
                 "sliderType":0,
-                "type":"skin_smooth"
+                "type":"smooth"
             }, {
                 "title":"美白",
                 "icon":"MMBeautyUI.bundle/beauty/skinWhiten@2x.png",
                 "highlight":"MMBeautyUI.bundle/beauty/skinWhiten-selected@2x.png",
                 "value":0.4,
                 "sliderType":0,
-                "type":"skin_whitening"
+                "type":"white"
 
             }, {
                 "title":"红润",
@@ -70,7 +70,7 @@
                 "highlight":"MMBeautyUI.bundle/beauty/ruddy-selected@2x.png",
                 "value":0.5,
                 "sliderType":0,
-                "type":"kBeautyFilterKeyRubby"
+                "type":"redden"
 
             }, {
                 "title":"大眼",
@@ -94,7 +94,7 @@
                 "highlight":"MMBeautyUI.bundle/beauty/sharpen-selected@2x.png",
                 "value":0.7,
                 "sliderType":0,
-                "type":"skin_sharpen"
+                "type":"sharpen"
 
             }
         ]
@@ -246,7 +246,7 @@
                 "highlight":"MMBeautyUI.bundle/microSurgery/eyebag_selected@2x.png",
                 "value":0,
                 "sliderType":0,
-                "type":"eyesArea"
+                "type":"remove_pouch"
 
             }, {
                 "title":"祛法令纹",
@@ -254,7 +254,7 @@
                 "highlight":"MMBeautyUI.bundle/microSurgery/eyeOther_selected@2x.png",
                 "value":0,
                 "sliderType":0,
-                "type":"nasolabialFoldsArea"
+                "type":"remove_nasolabial_floads"
 
             },
             {
@@ -263,7 +263,7 @@
                "highlight":"MMBeautyUI.bundle/microSurgery/eyebrighten-selected@2x.png",
                "value":0.0,
                "sliderType":0,
-               "type":"eyeBrighten"
+               "type":"eye_brighten"
 
            },{
                 "title":"白牙",
@@ -271,7 +271,7 @@
                 "highlight":"MMBeautyUI.bundle/microSurgery/teethwhiten-selected@2x.png",
                 "value":0,
                 "sliderType":0,
-                "type":"teethWhiten"
+                "type":"teeth_whiten"
 
             },
         ]

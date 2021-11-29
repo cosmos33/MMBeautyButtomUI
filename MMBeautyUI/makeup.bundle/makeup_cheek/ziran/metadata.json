@@ -1,9 +1,11 @@
 {
-    "name": "cheek",
+    "name": "blush",
     "makeup": [
         {
-            "type": "blush",
-            "folder": "cheek"
+        "type": "makeup_blush",
+        "resources": ["blush_ziran/blush.png"],
+        "blendMode": "Normal"
         }
     ]
 }
+

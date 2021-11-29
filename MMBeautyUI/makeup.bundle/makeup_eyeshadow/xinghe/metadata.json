@@ -2,8 +2,15 @@
     "name": "eyeshadow",
     "makeup": [
         {
-            "type": "eyeshadow",
-            "folders": ["eyeshadow", "eyeshadow2"]
+            "type": "makeup_eyes",
+            "resources": ["shadow_xinghe/eyeshadow/eyeshadow.png"],
+            "blendMode": "Normal"
+        },
+        {
+            "type": "makeup_eyes",
+            "resources": ["shadow_xinghe/eyeshadow2/eyeshadow.png"],
+            "blendMode": "Screen"
         }
     ]
 }
+

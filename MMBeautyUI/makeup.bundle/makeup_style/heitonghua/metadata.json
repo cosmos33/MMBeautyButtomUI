@@ -1,27 +1,45 @@
 {
-    "name": "style04",
+    "name": "heitonghua",
     "makeup": [
         {
-            "type": "pupil",
-            "folder": "makeup_pupil"
-        }, {
-            "type": "lip",
-            "folder": "makeup_lip"
-        }, {
-            "type": "facial",
-            "folder": "makeup_xiurong"
-        }, {
-            "type": "eyeshadow",
-            "folders": ["makeup_eyeshadow","makeup_eyeshadow2"]
-        }, {
-            "type": "eyebrow",
-            "folder": "makeup_eyebrow"
-        }, {
-            "type": "blush",
-            "folder": "makeup_cheek"
-        }, {
-            "type": "makeuplut",
-            "folder": "lookup"
+            "type": "makeup_pupil",
+            "resources": ["makeup_heitonghua/makeup_pupil/pupil.png"],
+            "blendMode": "Normal"
+        },
+        {
+            "type": "makeup_lips",
+            "resources": ["makeup_heitonghua/makeup_lip/lip.png", "makeup_heitonghua/makeup_lip/lip00.png"],
+            "blendMode": "Normal"
+        },
+        {
+            "type": "makeup_facial",
+            "resources": ["makeup_heitonghua/makeup_xiurong/face.png"],
+            "blendMode": "SoftLight"
+        },
+        {
+            "type": "makeup_eyes",
+            "resources": ["makeup_heitonghua/makeup_eyeshadow/eyeshadow.png"],
+            "blendMode": "Normal"
+        },
+        {
+            "type": "makeup_eyes",
+            "resources": ["makeup_heitonghua/makeup_eyeshadow2/eyeshadow.png"],
+            "blendMode": "Screen"
+        },
+        {
+            "type": "makeup_eyebrow",
+            "resources": ["makeup_heitonghua/makeup_eyebrow/eyebrow.png"],
+            "blendMode": "Normal"
+        },
+        {
+            "type": "makeup_blush",
+            "resources": ["makeup_heitonghua/makeup_cheek/blush.png"],
+            "blendMode": "Normal"
+        },
+        {
+            "type": "makeup_lut",
+            "resources": ["makeup_heitonghua/lookup/lookup.png"]
         }
     ]
 }
+

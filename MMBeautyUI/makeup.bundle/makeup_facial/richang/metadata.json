@@ -2,8 +2,11 @@
     "name": "facial",
     "makeup": [
         {
-            "type": "facial",
-            "folder": "facial"
+            "type": "makeup_facial",
+            "resources": ["facial_richang/face.png"],
+            "blendMode": "SoftLight"
         }
     ]
 }
+
+
