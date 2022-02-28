@@ -8,7 +8,7 @@
 
 #import "MMBeautyBottomRecordView.h"
 #import "MMBeautyBottomView.h"
-#import <MMBeautyKit/MMBeautyKit-umbrella.h>
+//#import <MMBeautyKit/MMBeautyKit-umbrella.h>
 
 extern NSArray * kMMBeautyKitOnceBeuatyArray(){
     static dispatch_once_t onceToken;
@@ -211,6 +211,17 @@ static NSArray * kMMBeautyAutoModelArray(){
         NSDictionary *dict = nil;
         for (NSDictionary *tmpDic in kMMBeautyAutoModelArray()) {
             if ([[tmpDic objectForKey:@"name"] isEqualToString:@"滤镜"]) {
+                dict = tmpDic;
+                break;
+            }
+        }
+        MMBottomViewModel *model = [[MMBottomViewModel alloc] initWithItem:dict];
+        [models addObject:model];
+    }
+    if (options & MMBeautyUIItemKeyBeautyBody || options == MMBeautyUIItemKeyAll) {
+        NSDictionary *dict = nil;
+        for (NSDictionary *tmpDic in kMMBeautyAutoModelArray()) {
+            if ([[tmpDic objectForKey:@"name"] isEqualToString:@"美体"]) {
                 dict = tmpDic;
                 break;
             }

@@ -29,8 +29,9 @@ typedef NS_OPTIONS(NSUInteger, MMBeautyUIItemKeyOptions) {
     MMBeautyUIItemKeyMakeupStyle = 1 << 4,              // 风格妆
     MMBeautyUIItemKeyMakeup = 1 << 5,                   // 美妆
     MMBeautyUIItemKeyLookUp = 1 << 6,                   // 滤镜
+    MMBeautyUIItemKeyBeautyBody = 1 << 7,               // 美体
     
-    MMBeautyUIItemKeyAll = MMBeautyUIItemKeyOnceBeauty | MMBeautyUIItemKeyBeauty | MMBeautyUIItemKeyMicroSurgery | MMBeautyUIItemKeyMakeupStyle | MMBeautyUIItemKeyMakeup | MMBeautyUIItemKeyLookUp
+    MMBeautyUIItemKeyAll = MMBeautyUIItemKeyOnceBeauty | MMBeautyUIItemKeyBeauty | MMBeautyUIItemKeyMicroSurgery | MMBeautyUIItemKeyMakeupStyle | MMBeautyUIItemKeyMakeup | MMBeautyUIItemKeyLookUp | MMBeautyUIItemKeyBeautyBody
 };
 
 NS_ASSUME_NONNULL_BEGIN
