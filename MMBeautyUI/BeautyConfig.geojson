@@ -362,6 +362,27 @@
                 "identifier": "1"
             }
         ]
+    },{
+        "name":"美体",
+        "type":"beauty",
+        "contents":[
+            {
+                "title":"瘦身",
+                "icon":"MMBeautyUI.bundle/beauty/thinbody@2x.png",
+                "highlight":"MMBeautyUI.bundle/beauty/thinbody-selected@2x.png",
+                "value":0,
+                "sliderType":0,
+                "type":"bodyWidth"
+            },
+            {
+                "title":"长腿",
+                "icon":"MMBeautyUI.bundle/beauty/longleg@2x.png",
+                "highlight":"MMBeautyUI.bundle/beauty/longleg-selected@2x.png",
+                "value":0,
+                "sliderType":0,
+                "type":"legLength"
+            },
+        ]
     },
     {
         "name":"滤镜",

@@ -13,6 +13,8 @@
 @property (nonatomic, strong) UILabel *selectedLabel;
 @property (nonatomic, strong) UIView *markView;
 @property (nonatomic, strong) NSLayoutConstraint *centerXLC;
+@property (nonatomic, strong) UIScrollView *scrollerView;
+@property (nonatomic, strong) NSMutableArray *titles;
 
 @end
 
@@ -33,14 +35,27 @@
     markView.backgroundColor = UIColor.whiteColor;
     _markView = markView;
     [self addSubview:markView];
-    
     [markView.widthAnchor constraintEqualToConstant:10].active = YES;
     [markView.heightAnchor constraintEqualToConstant:2].active = YES;
     [markView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
 
+   
+    UIScrollView *scrollerView = [[UIScrollView alloc] init];
+    scrollerView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addSubview:scrollerView];
+    scrollerView.backgroundColor = [UIColor clearColor];
+    scrollerView.showsHorizontalScrollIndicator = false;
+    [scrollerView.leftAnchor constraintEqualToAnchor:self.leftAnchor].active = YES;
+    [scrollerView.topAnchor constraintEqualToAnchor:self.topAnchor].active = YES;
+    [scrollerView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
+    [scrollerView.rightAnchor constraintEqualToAnchor:self.rightAnchor].active = YES;
+    self.scrollerView = scrollerView;
     NSInteger index = 100;
+    CGFloat leftCorn = 0;
+    CGFloat size = 0;
     NSMutableArray<UILabel *> *labels = [NSMutableArray array];
     for (NSString *title in titles) {
+        size += title.length;
         UILabel *titleLabel = [[UILabel alloc] init];
         titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
         titleLabel.textColor = [UIColor.whiteColor colorWithAlphaComponent:0.6];
@@ -52,23 +67,24 @@
         titleLabel.tag = index;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelClicked:)];
         [titleLabel addGestureRecognizer:tap];
+        
+        [scrollerView addSubview:titleLabel];
+        [titleLabel.widthAnchor constraintEqualToConstant:title.length * 14.5].active = YES;
+        [titleLabel.heightAnchor constraintEqualToConstant:17].active = YES;
+        [titleLabel.centerYAnchor constraintEqualToAnchor:self.centerYAnchor].active = YES;
+        
+        if (index == 100) {
+            [titleLabel.leftAnchor constraintEqualToAnchor:scrollerView.leftAnchor constant:5].active = YES;
+            self.centerXLC = [self.markView.centerXAnchor constraintEqualToAnchor:titleLabel.centerXAnchor];
+            self.centerXLC.active = YES;
+        } else {
+            [titleLabel.leftAnchor constraintEqualToAnchor:scrollerView.leftAnchor constant:15 * (index - 100) + leftCorn].active = YES;
+        }
         ++index;
+        leftCorn += title.length * 15;
     }
-    
-    UIStackView *hStackView = [[UIStackView alloc] initWithArrangedSubviews:labels];
-    hStackView.translatesAutoresizingMaskIntoConstraints = NO;
-    hStackView.axis = UILayoutConstraintAxisHorizontal;
-    hStackView.alignment = UIStackViewAlignmentCenter;
-    hStackView.distribution = UIStackViewDistributionFill;
-    hStackView.spacing = 15;
-    [self addSubview:hStackView];
-    
-    [hStackView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor].active = YES;
-    [hStackView.topAnchor constraintEqualToAnchor:self.topAnchor].active = YES;
-    [hStackView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor].active = YES;
-    
-    self.centerXLC = [markView.centerXAnchor constraintEqualToAnchor:labels[0].centerXAnchor];
-    self.centerXLC.active = YES;
+    self.scrollerView.contentSize = CGSizeMake(size  * 14.5 + (titles.count - 1) * 15 + 5 , 40);
+    self.titles = labels;
 }
 
 - (void)labelClicked:(UITapGestureRecognizer *)tap {
