@@ -56,6 +56,7 @@
         [titles addObject:model.name];
     }
     MMButtonItems *buttonItems = [[MMButtonItems alloc] initWithFrame:CGRectZero titles:titles];
+    buttonItems.translatesAutoresizingMaskIntoConstraints = NO;
     [buttonItems selectIndex:0];
     _buttonItems = buttonItems;
     
@@ -131,13 +132,18 @@
     button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [button addTarget:self action:@selector(resetButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     
-    UIStackView *hStackView = [[UIStackView alloc] initWithArrangedSubviews:@[buttonItems, button]];
-    hStackView.translatesAutoresizingMaskIntoConstraints = NO;
-    hStackView.axis = UILayoutConstraintAxisHorizontal;
-    hStackView.alignment = UIStackViewAlignmentCenter;
-    hStackView.distribution = UIStackViewDistributionEqualSpacing;
-    hStackView.spacing = 8;
-    [bgView.contentView addSubview:hStackView];
+    [bgView.contentView addSubview:button];
+    [button.heightAnchor constraintEqualToConstant:40].active = YES;
+    [button.topAnchor constraintEqualToAnchor:bgView.contentView.topAnchor constant:5].active = YES;
+    [button.rightAnchor constraintEqualToAnchor:bgView.contentView.rightAnchor].active = YES;
+    
+    
+    [bgView.contentView addSubview:buttonItems];
+    
+    [buttonItems.heightAnchor constraintEqualToConstant:40].active = YES;
+    [buttonItems.leftAnchor constraintEqualToAnchor:bgView.leftAnchor constant:5].active = YES;
+    [buttonItems.rightAnchor constraintEqualToAnchor:bgView.rightAnchor constant:-50].active = YES;
+    [buttonItems.topAnchor constraintEqualToAnchor:bgView.contentView.topAnchor constant:5].active = YES;
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.itemSize = CGSizeMake(60, 95);
@@ -178,24 +184,17 @@
     [bgView.contentView addSubview:makeupView];
     _makeupView = makeupView;
 
-    [buttonItems.widthAnchor constraintEqualToAnchor:hStackView.widthAnchor constant:-60].active = YES;
-    [buttonItems.heightAnchor constraintEqualToConstant:40].active = YES;
     
-    [button.heightAnchor constraintEqualToConstant:40].active = YES;
-    
-    [hStackView.leadingAnchor constraintEqualToAnchor:bgView.contentView.leadingAnchor constant:5].active = YES;
-    [hStackView.trailingAnchor constraintEqualToAnchor:bgView.contentView.trailingAnchor constant:-5].active = YES;
-    [hStackView.topAnchor constraintEqualToAnchor:bgView.contentView.topAnchor].active = YES;
-    
+
     [collectionView.centerXAnchor constraintEqualToAnchor:bgView.contentView.centerXAnchor].active = YES;
     [collectionView.widthAnchor constraintEqualToAnchor:bgView.contentView.widthAnchor].active = YES;
     [collectionView.heightAnchor constraintEqualToConstant:95].active = YES;
-    [collectionView.topAnchor constraintEqualToAnchor:hStackView.bottomAnchor constant:15].active = YES;
+    [collectionView.topAnchor constraintEqualToAnchor:bgView.contentView.topAnchor constant:55].active = YES;
     
     [makeupView.centerXAnchor constraintEqualToAnchor:bgView.contentView.centerXAnchor].active = YES;
     [makeupView.widthAnchor constraintEqualToAnchor:bgView.contentView.widthAnchor].active = YES;
     [makeupView.heightAnchor constraintEqualToConstant:95].active = YES;
-    [makeupView.topAnchor constraintEqualToAnchor:hStackView.bottomAnchor constant:15].active = YES;
+    [makeupView.topAnchor constraintEqualToAnchor:bgView.contentView.topAnchor constant:55].active = YES;
 
     [bgView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor].active = YES;
     [bgView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor].active = YES;
@@ -208,7 +207,7 @@
     [self addSubview:grayLineView];
     [grayLineView.widthAnchor constraintEqualToAnchor:self.widthAnchor constant:-10].active = YES;
     [grayLineView.centerXAnchor constraintEqualToAnchor:self.centerXAnchor].active = YES;
-    [grayLineView.bottomAnchor constraintEqualToAnchor:hStackView.bottomAnchor].active = YES;
+    [grayLineView.bottomAnchor constraintEqualToAnchor:buttonItems.bottomAnchor].active = YES;
     [grayLineView.heightAnchor constraintEqualToConstant:1].active = YES;
 }
 extern NSArray * kMMBeautyKitOnceBeuatyArray(void);
@@ -219,7 +218,7 @@ extern NSArray * kMMBeautyKitOnceBeuatyArray(void);
     MMBottomViewModelItem *curItem = self.models[self.selectedIndex.section].contents[self.selectedIndex.row];
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     NSNumber *number = [NSNumber numberWithDouble:curItem.curPos * 100];
-    formatter.numberStyle = NSNumberFormatterNoStyle;
+    formatter.numberStyle = kCFNumberFormatterNoStyle;
     NSString *str = [formatter stringFromNumber:number];
     if (!self.collectionView.hidden) {
         MMBeautyTabCollectionViewCell *cell = (MMBeautyTabCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:self.selectedIndex.row inSection:0]];
@@ -502,11 +501,16 @@ extern NSArray * kMMBeautyKitOnceBeuatyArray(void);
     cell.titleLabel.text = item.title;
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     NSNumber *number = [NSNumber numberWithDouble:item.curPos * 100];
-    formatter.numberStyle = NSNumberFormatterNoStyle;
+    formatter.numberStyle = kCFNumberFormatterNoStyle;
     NSString *str = [formatter stringFromNumber:number];
     cell.valueLabel.text = str;
     if ([cell.titleLabel.text isEqualToString:@"原图"] || self.selectedIndex.section == 0 || self.selectedIndex.section == 3) {
         cell.valueLabel.text = @" ";
+    }
+    if ([item.title isEqualToString:@"瘦身"] || [item.title isEqualToString:@"长腿"]) {
+        if ([str isEqualToString:@"-1"]) {
+            cell.valueLabel.text = @"0";
+        }
     }
     return cell;
 }

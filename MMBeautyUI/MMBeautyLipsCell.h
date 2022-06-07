@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic , strong) UIView * selectedView;
 @property (nonatomic , strong) UILabel *titleLabel;
 @property (nonatomic , strong) UIImageView *iconImg;
-
+@property (nonatomic , strong) NSLayoutConstraint * titleLeft;
 
 - (void)configCellWithName:(NSString *)title;
 

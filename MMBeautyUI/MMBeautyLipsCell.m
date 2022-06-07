@@ -77,10 +77,11 @@
         [_titleLabel.centerYAnchor constraintEqualToAnchor:self.centerYAnchor].active = YES;
         [_titleLabel.leftAnchor constraintEqualToAnchor:self.leftAnchor].active = YES;
         if (self.imageView.hidden) {
-            [_titleLabel.rightAnchor constraintEqualToAnchor:self.rightAnchor].active = YES;
+            self.titleLeft = [_titleLabel.rightAnchor constraintEqualToAnchor:self.rightAnchor];
         } else {
-            [_titleLabel.rightAnchor constraintEqualToAnchor:self.rightAnchor constant:-4].active = YES;
+            self.titleLeft = [_titleLabel.rightAnchor constraintEqualToAnchor:self.rightAnchor constant:-4];
         }
+        self.titleLeft.active = YES;
         [_titleLabel.widthAnchor constraintEqualToConstant:24].active = YES;
         [_titleLabel.heightAnchor constraintEqualToConstant:33/2.0].active = YES;
     }
