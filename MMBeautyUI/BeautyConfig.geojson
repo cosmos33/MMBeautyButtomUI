@@ -449,7 +449,7 @@
                 "highlight":"MMBeautyUI.bundle/beauty/thinbody-selected@2x.png",
                 "value":0.7,
                 "sliderType":0,
-                "type":"smooth"
+                "type":"bodyWidth"
             },
             {
                 "title":"长腿",
@@ -457,7 +457,7 @@
                 "highlight":"MMBeautyUI.bundle/beauty/longleg-selected@2x.png",
                 "value":0.7,
                 "sliderType":0,
-                "type":"smooth"
+                "type":"legLength"
             },
         ]
     }
